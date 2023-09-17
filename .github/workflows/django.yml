@@ -29,9 +29,7 @@ jobs:
       run: |
         python manage.py migrate
 
-
-
     - name: Start project
       run: |
-        gunicorn your_project_name.wsgi:application --bind 0.0.0.0:$PORT
+        python manage.py runserver
 
